@@ -29,6 +29,8 @@ export default class App extends Component<{}> {
         results: [],
     }
 
+    timeout = null
+
     constructor(props) {
         super(props)
 
@@ -38,34 +40,30 @@ export default class App extends Component<{}> {
         Tts.addEventListener('tts-finish', (event) => console.warn("finish", event));
         Tts.addEventListener('tts-cancel', (event) => console.warn("cancel", event));
 
-        Voice.onSpeechStart = this.onSpeechStartHandler.bind(this);
-        Voice.onSpeechEnd = this.onSpeechEndHandler.bind(this);
         Voice.onSpeechResults = this.onSpeechResultsHandler.bind(this);
-        Voice.onSpeechRecognized = this.onSpeechRecognized.bind(this);
     }
 
-    onSpeechStartHandler() {
-
+    componentWillUnmount() {
+        Voice.removeAllListeners()
+        Voice.destroy()
     }
 
-    onSpeechEndHandler() {
-        console.warn('speech end')
-    }
 
-    onSpeechRecognized() {
-        console.warn('speech recognized')
-    }
+    onSpeechResultsHandler({ value }) {
+        this.setState({
+            results: value
+        })
 
-    onSpeechResultsHandler() {
-        console.warn('speech results')
-        /* const { value } = event
-
-        if(value.length > 0) {
-            console.warn(huify(value[0]).join(' '))
-            Tts.speak(huify(value[0]).join(' '))
+        if(!this.timeout) {
+            clearTimeout(this.timeout)
+            this.timeout = setTimeout(this.sayResults, 1000)
         }
+    }
 
-        Voice.stop() */
+    sayResults = () => {
+        Tts.speak(huify(this.state.results[0]).join(' '))
+        Voice.stop()
+        this.timeout = null
     }
 
     handlePress = () => {
