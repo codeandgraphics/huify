@@ -1,65 +1,35 @@
-export function huify(text){
-    const newWords = []
-    const words = text.split(' ')
+const consonants = 'бвгджзклмнпрстфхцчшщ'
+const vowels = {
+  а: 'я',
+  е: 'е',
+  ё: 'ё',
+  и: 'и',
+  о: 'е',
+  у: 'ю',
+  э: 'е',
+  ю: 'ю',
+  я: 'я',
+  ы: 'и',
+}
 
-    words.forEach(item => {
-        if(item.match(/[0-9]/)) return
+export const huify = message => {
+  const text = message
+    .replace(/(\r\n|\n|\r)/gm, ' ')
+    .trim()
+    .toLowerCase()
 
-        const length = item.length
+  const arrayOfWords = text.split(' ')
+  const words = []
 
-        if(length <= 2) {
-            if(item[0].match(/[уеыаоэяиюУЕЫАОЭЯИЮ]/)) {
-                newWords.push("хуй" + item)
-            } else {
-                newWords.push("хуе" + item)
-            }
-            return
-        } else if(length > 2 && length <= 4) {
-            if(item[1].match(/[уеыаоэяиюУЕЫАОЭЯИЮ]/)) {
-                if(item[0].match(/[уеыаоэяиюйцкнгшщзхфвпрлджчсмтб]/)) {
-                    newWords.push(item.replace(/^./, "хуй"))
-                    return
-                }
-                if(item[0].match(/[УЕЫАОЭЯИЮЙЦКНГШЩЗХФВПРЛДЖЧСМТБ]/)) {
-                    newWords.push(item.replace(/^./, "Хуй"))
-                    return
-                }
-            }
-            if(item[1].match(/[йцкнгшщзхфвпрлджчсмтбЙЦКНГШЩЗХФВПРЛДЖЧСМТБ]/)) {
-                if(item[0].match(/[уеыаоэяиюйцкнгшщзхфвпрлджчсмтб]/)) {
-                    newWords.push(item.replace(/^./, "хуе"))
-                    return
-                }
-                if(item[0].match(/[УЕЫАОЭЯИЮЙЦКНГШЩЗХФВПРЛДЖЧСМТБ]/)) {
-                    newWords.push(item.replace(/^./, "Хуе"))
-                    return
-                }
-            }
-        } else {
-            if(item[2].match(/[уеыаоэяиюУЕЫАОЭЯИЮ]/)) {
-                if(item[0].match(/[уеыаоэяиюйцкнгшщзхфвпрлджчсмтб]/)) {
-                    newWords.push(item.replace(/^../, "хуй"))
-                    return
-                }
-                if(item[0].match(/[УЕЫАОЭЯИЮЙЦКНГШЩЗХФВПРЛДЖЧСМТБ]/)) {
-                    newWords.push(item.replace(/^../, "Хуй"))
-                    return
-                }
-            }
-            if(item[2].match(/[йцкнгшщзхфвпрлджчсмтбЙЦКНГШЩЗХФВПРЛДЖЧСМТБ]/)) {
-                if(item[0].match(/[уеыаоэяиюйцкнгшщзхфвпрлджчсмтб]/)) {
-                    newWords.push(item.replace(/^../, "хуе"))
-                    return
-                }
-                if(item[0].match(/[УЕЫАОЭЯИЮЙЦКНГШЩЗХФВПРЛДЖЧСМТБ]/)) {
-                    newWords.push(item.replace(/^../, "Хуе"))
-                    return
-                }
-            }
-        }
+  arrayOfWords.forEach(function(word) {
+    if (word.length > 3) {
+      while (~consonants.indexOf(word[0])) {
+        word = word.substr(1)
+      }
+      word = 'ху' + vowels[word[0]] + word.substr(1)
+    }
+    words.push(word)
+  })
 
-    })
-
-    return newWords
-
+  return words.join(' ')
 }
