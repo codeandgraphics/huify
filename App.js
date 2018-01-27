@@ -5,8 +5,8 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import Tts from 'react-native-tts'
+import { Text, View, TouchableOpacity } from 'react-native'
+import Speech from 'react-native-speech'
 import Voice from 'react-native-voice'
 
 import { huify } from './huify'
@@ -25,11 +25,11 @@ export default class App extends Component<{}> {
   constructor(props) {
     super(props)
 
-    Tts.setDefaultLanguage('ru-RU')
+    // Tts.setDefaultLanguage('ru-RU')
 
-    Tts.addEventListener('tts-start', event => {})
-    Tts.addEventListener('tts-finish', event => {})
-    Tts.addEventListener('tts-cancel', event => {})
+    // Tts.addEventListener('tts-start', event => {})
+    // Tts.addEventListener('tts-finish', event => {})
+    // Tts.addEventListener('tts-cancel', event => {})
 
     Voice.onSpeechResults = this.onSpeechResultsHandler.bind(this)
 
@@ -58,8 +58,11 @@ export default class App extends Component<{}> {
 
   sayResults = () => {
     if (this.say) {
-      Tts.speak(huify(this.state.results[0]))
       Voice.stop()
+      Speech.speak({
+        text: huify(this.state.results[0]),
+        voice: 'ru-RU',
+      })
       this.say = false
 
       this.setState({
