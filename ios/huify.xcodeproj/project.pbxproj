@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -36,7 +35,6 @@
 		2DCD954D1E0B4F2C00145EB5 /* huifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* huifyTests.m */; };
 		31E629BE99ED41898474057D /* libSpeechSynthesizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82396ADB67664CA08B9A3621 /* libSpeechSynthesizer.a */; };
 		4EFF1217115745AB8163AF66 /* libVoice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C138371D06D848538BC44C5E /* libVoice.a */; };
-		5E3BB5C3DCE343DAA2D98B04 /* libTextToSpeech.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6ACF2A5488146B6A82CFEE1 /* libTextToSpeech.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -316,13 +314,6 @@
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
 		};
-		D202CDD5201CF2BC00FDE9DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94AD8C1529444604A004A0A9 /* TextToSpeech.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3A6FB2081D99E12200593599;
-			remoteInfo = TextToSpeech;
-		};
 		D202CDD8201CF2BC00FDE9DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A44503FA75464BF78C0DE4D8 /* Voice.xcodeproj */;
@@ -367,11 +358,9 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		82396ADB67664CA08B9A3621 /* libSpeechSynthesizer.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSpeechSynthesizer.a; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		94AD8C1529444604A004A0A9 /* TextToSpeech.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = TextToSpeech.xcodeproj; path = "../node_modules/react-native-tts/ios/TextToSpeech.xcodeproj"; sourceTree = "<group>"; };
 		A44503FA75464BF78C0DE4D8 /* Voice.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = Voice.xcodeproj; path = "../node_modules/react-native-voice/ios/Voice.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		C138371D06D848538BC44C5E /* libVoice.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libVoice.a; sourceTree = "<group>"; };
-		D6ACF2A5488146B6A82CFEE1 /* libTextToSpeech.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libTextToSpeech.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -400,7 +389,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				5E3BB5C3DCE343DAA2D98B04 /* libTextToSpeech.a in Frameworks */,
 				4EFF1217115745AB8163AF66 /* libVoice.a in Frameworks */,
 				31E629BE99ED41898474057D /* libSpeechSynthesizer.a in Frameworks */,
 			);
@@ -588,7 +576,6 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				94AD8C1529444604A004A0A9 /* TextToSpeech.xcodeproj */,
 				A44503FA75464BF78C0DE4D8 /* Voice.xcodeproj */,
 				31908372D5A940CA8FAF373C /* SpeechSynthesizer.xcodeproj */,
 			);
@@ -647,14 +634,6 @@
 				82396ADB67664CA08B9A3621 /* libSpeechSynthesizer.a */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		D202CDD0201CF2BC00FDE9DC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D202CDD6201CF2BC00FDE9DC /* libTextToSpeech.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D202CDD2201CF2BC00FDE9DC /* Products */ = {
@@ -839,10 +818,6 @@
 				{
 					ProductGroup = D298448E201CF70A0053B2F8 /* Products */;
 					ProjectRef = 31908372D5A940CA8FAF373C /* SpeechSynthesizer.xcodeproj */;
-				},
-				{
-					ProductGroup = D202CDD0201CF2BC00FDE9DC /* Products */;
-					ProjectRef = 94AD8C1529444604A004A0A9 /* TextToSpeech.xcodeproj */;
 				},
 				{
 					ProductGroup = D202CDD2201CF2BC00FDE9DC /* Products */;
@@ -1119,13 +1094,6 @@
 			remoteRef = D202CDCE201CF2BC00FDE9DC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D202CDD6201CF2BC00FDE9DC /* libTextToSpeech.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTextToSpeech.a;
-			remoteRef = D202CDD5201CF2BC00FDE9DC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		D202CDD9201CF2BC00FDE9DC /* libVoice.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1281,7 +1249,6 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tts/ios/TextToSpeech",
 					"$(SRCROOT)/../node_modules/react-native-voice/ios/Voice",
 					"$(SRCROOT)/../node_modules/react-native-speech",
 				);
@@ -1290,9 +1257,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1311,7 +1275,6 @@
 				DEVELOPMENT_TEAM = 95EM89639Z;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tts/ios/TextToSpeech",
 					"$(SRCROOT)/../node_modules/react-native-voice/ios/Voice",
 					"$(SRCROOT)/../node_modules/react-native-speech",
 				);
@@ -1320,9 +1283,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1342,7 +1302,6 @@
 				DEVELOPMENT_TEAM = 95EM89639Z;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tts/ios/TextToSpeech",
 					"$(SRCROOT)/../node_modules/react-native-voice/ios/Voice",
 					"$(SRCROOT)/../node_modules/react-native-speech",
 				);
@@ -1367,7 +1326,6 @@
 				DEVELOPMENT_TEAM = 95EM89639Z;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tts/ios/TextToSpeech",
 					"$(SRCROOT)/../node_modules/react-native-voice/ios/Voice",
 					"$(SRCROOT)/../node_modules/react-native-speech",
 				);
@@ -1398,7 +1356,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tts/ios/TextToSpeech",
 					"$(SRCROOT)/../node_modules/react-native-voice/ios/Voice",
 					"$(SRCROOT)/../node_modules/react-native-speech",
 				);
@@ -1406,9 +1363,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1436,7 +1390,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tts/ios/TextToSpeech",
 					"$(SRCROOT)/../node_modules/react-native-voice/ios/Voice",
 					"$(SRCROOT)/../node_modules/react-native-speech",
 				);
@@ -1444,9 +1397,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1475,9 +1425,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.huify-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1502,9 +1449,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.huify-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

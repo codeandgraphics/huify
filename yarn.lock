@@ -3981,10 +3981,6 @@ react-native-speech@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/react-native-speech/-/react-native-speech-0.1.2.tgz#c16127c6a61351eeddb7878db80709f7ce6a7057"
 
-react-native-tts@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/react-native-tts/-/react-native-tts-1.4.1.tgz#6b4bcd9416de5f3e8bc06c285e8a97d0764aff1b"
-
 react-native-voice@^0.2.5:
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/react-native-voice/-/react-native-voice-0.2.5.tgz#ba22123e6f25e74d3b0ce6ad7daaa081a16ced4b"

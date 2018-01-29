@@ -13,7 +13,7 @@ export default StyleSheet.create({
     borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
+    backgroundColor: '#D0021B',
   },
   text: {
     color: 'white',
